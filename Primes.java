@@ -25,7 +25,21 @@ public class Primes {
 
             current++;
         }
+        System.out.println("Prime numbers up to " + n + ":");
 
+        int count = 0;
+        for (int i = 2; i <= n; i++) 
+        {
+            if (isPrime[i]) 
+            {
+                System.out.println(i);
+                count++;
+            }
+        }
 
+        int percentage = (int) Math.round((count * 100.0) / n);
+
+        System.out.println("There are " + count + " primes between 2 and " + n + " (" + percentage + "% are primes)");
     }
+
 }
